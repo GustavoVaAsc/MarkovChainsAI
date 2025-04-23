@@ -23,7 +23,6 @@ fn generate_markov_chain(n: usize, markov_chain: &mut Vec<Vec<f64>>) {
         markov_chain[i][i + 1] = P;
     }
 
-    // absorbing states
     markov_chain[0][0] = 1.0;
     markov_chain[n - 1][n - 1] = 1.0;
 }
